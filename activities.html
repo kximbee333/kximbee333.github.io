@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>กิจกรรม - Kittiphong's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans Thai', sans-serif;
+      background-color: #ffffff;
+      color: #2e3d2f;
+    }
+
+    header {
+      background-color: #006633;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffd700;
+    }
+
+    .activities {
+      padding: 50px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .activities h1 {
+      color: #006633;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .activity-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1em;
+      line-height: 1.8em;
+    }
+
+    .activity-list li {
+      background-color: #f9f9f9;
+      border-left: 6px solid #006633;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .activity-list li:hover {
+      background-color: #e0f0e5;
+    }
+
+    .activity-details {
+      display: none;
+      padding: 15px 20px;
+      background-color: #f0f8f5;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .activity-details img {
+      max-width: 45%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #006633;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .buttons a:hover {
+      background-color: #004d26;
+    }
+
+    .buttons a:active {
+      transform: scale(0.97);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Kittiphong</strong></div>
+    <nav>
+      <a href="index.html">หน้าหลัก</a>
+      <a href="projects.html">ผลงาน</a>
+      <a href="about.html">ประวัติ</a>
+      <a href="grades.html">เกรด</a>
+      <a href="activities.html">กิจกรรม</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <div class="activities">
+    <h1>กิจกรรมที่เคยเข้าร่วม / เคยทำ</h1>
+    <ul class="activity-list">
+      <li onclick="toggleDetails(1)"> การแข่งขันหุ่นยนต์ระดับกลาง ณ งานศิลปหัตถกรรมครั้งที่ 71 พ.ศ.2566</li>
+      <div id="details-1" class="activity-details">
+        <img src="/pic/กิจกรรม/8e1080a7-e7f9-418e-b3d6-9654472d9bac_20250902_232114_0000.jpg" alt="ระดับกลาง">
+        <img src="/pic/กิจกรรม/a9f29e14-1a85-4c0b-b8fd-bd96bdca3256_20250903_002443_0000.jpg" alt="ระดับกลาง" />
+        <p>การแข่งขันหุ่นยนต์ระดับกลางโดยใช้ภาษา C/C++ ในการควบคุมหุ่นยนต์ทำให้หุ่นยนต์สามารถเคลื่อนที่ได้อย่างละเอียด ซึ่งในการแข่งขันครั้งนี้ได้รับประสบการณ์มากมาย ประสบการณ์ที่สำคัญอย่างนึงที่ได้คือการทำงานเป็นทีมและการทำงานในเวลาที่จำกัด ซึ่งในการแข่งขันครั้งนี้ได้รับรางวัลเหรียญทองชนะเลิศอันดับที่ 1 ด้วยคะแนน 100 คะแนน</p>
+      </div>
+
+      <li onclick="toggleDetails(2)"> การแข่งขันหุ่นยนต์ระดับผสม ณ งานศิลปหัตถกรรมครั้งที่ 72 พ.ศ.2567</li>
+      <div id="details-2" class="activity-details">
+        <img src="/pic/กิจกรรม/ae950534-ffdc-440e-885e-e6f3bf2a564d_20250902_232506_0000.jpg" alt="ระดับผสม">
+        <p> การแข่งขันหุ่นยนต์ระดับผสมโดยใช้ภาษา C/C++ ในการควบคุมหุ่นยนต์ทำให้หุ่นยนต์สามารถเคลื่อนที่ได้อย่างละเอียด ซึ่งในการแข่งขันครั้งนี้ได้รับประสบการณ์มากมาย ประสบการณ์ที่สำคัญอย่างนึงที่ได้คือการทำงานเป็นทีมและการทำงานในเวลาที่จำกัด ซึ่งในการแข่งขันครั้งนี้ได้รับรางวัลเหรียญทองชนะเลิศอันดับที่ 1 </p>
+      </div>
+
+      <li onclick="toggleDetails(3)"> อบรมและแข่งขันหุ่นยนต์ ณ โรงเรียนโล๊ะป่าตุ้ม พ.ศ.2567</li>
+      <div id="details-3" class="activity-details">
+        <img src="/pic/กิจกรรม/c3a49a4e-21db-4eb1-816e-d7bf1fc1b5b1_20250902_232713_0000.jpg" alt="อบรม">
+        <p>การอบรมและแข่งขันหุ่นยนต์แบบต่อบล็อก เป็นประสบการณ์การใหม่ในชีวิตเพราะต้องเปลี่ยนจากการเขียนโค้ดมาเป็นการต่อบล็อกทำให้ไม่ถนัดจึงทำให้การแข่งครั้งนี้ได้รางวัลรองชนะเลิศอันดับที่ 1</p>
+      </div>
+
+      <li onclick="toggleDetails(4)"> การฝึกสร้างเว็บไซต์และการออกแบบ UI ด้วย HTML CSS</li>
+      <div id="details-4" class="activity-details">
+        <img src="/pic/Sweb/Screenshot_2025-09-03-00-02-44-483_io.spck-edit.jpg" alt="">
+        <img src="/pic/Sweb/Screenshot_2025-09-03-00-03-09-597_io.spck-edit.jpg" alt="" />
+        <img src="/pic/Sweb/Screenshot_2025-09-03-00-03-54-428_io.spck-edit.jpg" alt="" />
+        <img src="/pic/Sweb/Screenshot_2025-09-03-00-04-16-439_io.spck-edit.jpg" alt="" />
+        <img src="/pic/Sweb/Screenshot_2025-09-03-00-04-53-770_io.spck-edit.jpg" alt="" />
+        <img src="/pic/Sweb/Screenshot_2025-09-03-00-05-14-734_io.spck-edit.jpg" alt="" />
+        <img src="/pic/Sweb/Screenshot_2025-09-03-00-05-27-863_io.spck-edit.jpg" alt="" />
+        <p></p>
+      </div>
+
+      <li onclick="toggleDetails(5)"> none</li>
+      <div id="details-5" class="activity-details">
+        <img src="images/stem-activity.jpg" alt="">
+        <p></p>
+      </div>
+    </ul>
+
+    <div class="buttons">
+      <a href="index.html">← กลับหน้าหลัก</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetails(id) {
+      const detail = document.getElementById('details-' + id);
+      detail.style.display = (detail.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
